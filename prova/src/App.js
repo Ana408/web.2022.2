@@ -12,10 +12,10 @@ import  {Questao3}  from "./componets/Questao3";
 const App = () => {
   return (
     <div className="container">
-      <h1>Avaliação parcial 01</h1>
+      <h1>Avaliação</h1>
 
       <h1>
-        <u> Questão 01</u>
+         Questão 01
       </h1>
       <Questao1>
         <QuestaoA
