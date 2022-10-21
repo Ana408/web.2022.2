@@ -7,7 +7,7 @@ import "../style.css";
   const [valor2, setValor2] = useState(0);
   
   return (
-    <div className="row">
+    <div>
       <div>
         <input name="valor1" type="text" onChange={(e) => {
             setValor1(parseFloat(e.target.value));
@@ -45,5 +45,5 @@ import "../style.css";
     </div> 
   );
 };
-export  {Questao2}
+export default Questao2;
 

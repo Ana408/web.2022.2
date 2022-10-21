@@ -10,4 +10,4 @@ import React from "react";
     </div>
   );
 };
-export  { QuestaoA  }
+export  default QuestaoA;

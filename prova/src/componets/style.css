@@ -1,4 +1,12 @@
 
 button, input{
-    margin: 5px ;
+    margin: 8px ;
+    
+}
+.btn{
+   border-radius: 5px;
+   
+}
+h1{
+    margin: 15px;
 }

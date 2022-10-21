@@ -10,4 +10,4 @@ const Questao1 = (props) => {
     )
 }
 
-export  {Questao1}
+export default Questao1;

@@ -6,7 +6,7 @@ import React from "react";
   const listDisciplinas = () => {
     return disciplinas.map((item, index) => {
       return (
-        <li className="list-group-item" key={index}>
+        <li  key={index}>
           {item}
         </li>
       );
@@ -15,9 +15,9 @@ import React from "react";
 
   return (
     <div>
-      <h4 className="list-group-item">Disciplinas</h4>
-      <ul className="list-group">{listDisciplinas()}</ul>
+      <h3>Disciplinas</h3>
+      <ul>{listDisciplinas()}</ul>
     </div>
   );
 };
-export   {QuestaoB} 
+export default QuestaoB;

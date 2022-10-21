@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+import { useState, useEffect } from 'react'
 import axios from "axios";
 
 
 const Questao3 = () => {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState([])
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=10&offset=" + offset)
       .then((response)=>{
         //console.log(response.data)
         setPokemons(response.data)
@@ -15,13 +17,14 @@ const Questao3 = () => {
       .catch((erro) => {
         console.log(erro);
       });
-  }, []);
+  }, [offset]
+  );
  
 
   const generateTableBody = ()=> {
     return pokemons.map(
         (element,index)=>{
-            element.key = index
+        element.key=index;
             return (
                 <tr>
                     <td>{element.name}</td>
@@ -30,7 +33,7 @@ const Questao3 = () => {
             )
         }
     )
-}
+      }
 
   return (
     <div>
@@ -44,7 +47,9 @@ const Questao3 = () => {
         </thead>
         <tbody>{generateTableBody()}</tbody>
       </table>
-
+      <button className="btn btn-secundary" onClick={(evento) => {setOffset(offset + 10)}}>
+        Ver +10
+      </button>
   
     </div>
     
@@ -52,4 +57,4 @@ const Questao3 = () => {
   );
 };
 
-export { Questao3 }
+export  default Questao3 ;
